@@ -60,3 +60,9 @@ yarn-error.log*
 # Запрещаем отправлять локальный хелпер автодополнения в Git, если он лежит в local
 /local/bitrix_ide_helper.php
 /bitrix_ide_helper.php
+# Системные файлы и конфигурации Битрикса, которые не нужно отслеживать в Git
+.access.php
+urlrewrite.php
+
+# Настройки самого сервера (если на продакшене они другие)
+.htaccess
