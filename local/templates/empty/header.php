@@ -1,4 +1,5 @@
 <?
+global $APPLICATION;
 if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	die();
 ?>
@@ -10,17 +11,17 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	<!--[if IE]>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Заголовок окна браузера</title>
+	<title><?$APPLICATION->ShowTitle();?></title>
 	<?$APPLICATION->showHead();?>
 
-	<link rel="stylesheet" type="text/css" href="css/common-styles.css" />
-	<link rel="icon" href="<?SITE_TEMPLATE_PATH?>ico/favicon_bx.png">
-
+	<link rel="icon" href="<?=SITE_TEMPLATE_PATH?>/ico/favicon_bx.png">
+    <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/css/common-styles.css');?>
 	<!--[if lt IE 9]>
-	<script src="js/vendor/modernizr-html5shiv-respond.min.js"></script>
+
+	<script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH.'/js/vendor/modernizr-html5shiv-respond.min.js');?>"></script>
 	<![endif]-->
 	<!--[if gte IE 9]><!-->
-	<script src="js/vendor/modernizr.min.js"></script>
+    <script src="<?=CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH.'/js/vendor/modernizr.min.js');?>"></script>
 	<!--<![endif]-->
 </head>
 <body>
@@ -30,6 +31,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	обновите свой браузер</a> или <a href="http://www.google.com/chromeframe/?redirect=true">установите Google Chrome
 	Frame</a> чтобы улучшить взаимо.действие с сайтом.</p>
 <![endif]-->
+<?$APPLICATION->ShowPanel();?>
 
 <div class="sticky-wrap">
 	<header>
@@ -103,7 +105,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 			<li><a href="#">Раздел</a></li>
 			<li class="active">Детальная страница</li>
 		</ol>
-		<h1>Текстовая страница</h1>
+		<h1><?$APPLICATION->ShowTitle(false);?></h1>
 	</div>
 	<div class="container">
 						

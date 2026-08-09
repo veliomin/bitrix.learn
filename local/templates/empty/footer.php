@@ -42,19 +42,18 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		</div>
 	</div>
 </footer>
+<?
+// ОБЯЗАТЕЛЬНО ПОДКЛЮЧИТЕ ЭТИ СКРИПТЫ И СТИЛИ
+$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/vendor/jquery.min.js');
+$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/vendor/bootstrap/collapse.js');
+$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/vendor/bootstrap/tooltip.js');
+$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/vendor/plugins.js');
+$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/vendor/jquery.touchSwipe.js');
+$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/vendor/jquery.ba-throttle-debounce.min.js');
+// Уникальные JS для данной страницы
 
-<!--ОБЯЗАТЕЛЬНО ПОДКЛЮЧИТЕ ЭТИ СКРИПТЫ И СТИЛИ-->
-<script src="js/vendor/jquery.min.js"></script>
-<script src="js/vendor/bootstrap/collapse.js"></script>
-<script src="js/vendor/bootstrap/tooltip.js"></script>
-<script src="js/vendor/plugins.js"></script>
-<script src="js/vendor/jquery.touchSwipe.js"></script>
-<script src="js/vendor/jquery.ba-throttle-debounce.min.js"></script>
-
-<!--Уникальные JS для данной страницы-->
-
-<!--ОБЯЗАТЕЛЬНО ПОДКЛЮЧИТЕ ЭТИ СКРИПТЫ И СТИЛИ-->
-<script src="js/main.js"></script>
-
+// ОБЯЗАТЕЛЬНО ПОДКЛЮЧИТЕ ЭТИ СКРИПТЫ И СТИЛИ
+$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . '/js/main.js');
+?>
 </body>
 </html>
